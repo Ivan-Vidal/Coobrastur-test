@@ -5,7 +5,7 @@
 }
 .topo{
     display: flex;
-   margin-top: 150px;
+    margin-top: 150px;
 }
 .topo-img{
     margin-right: 15px;
@@ -19,7 +19,7 @@
     color: #08436F;
 }
 .risco{
-   width: 100%;
+    width: 100%;
 }
 h2{
     font-family: Roboto;
@@ -31,11 +31,11 @@ h2{
 }
 p{
     font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-color: #666666;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
 }
 .form-control{
     background: #FFFFFF;
@@ -76,7 +76,7 @@ color: #666666;
 @media(min-width:540px){
     .form-control{
         width: 400px;
-
-     }
+        
+    }
 }
 

@@ -1,0 +1,29 @@
+.navbar{
+    padding: 0px 1rem 0px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+width: 100%;
+height: 107px;
+color: white;
+
+background: #08436F;
+}
+.sair{
+    text-decoration: none;
+    margin-left: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+@media(min-width:540px){
+   .navbar{
+           padding-right: 3rem;
+           padding-left: 3rem;
+   
+        }
+   }
+

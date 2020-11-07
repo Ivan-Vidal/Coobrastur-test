@@ -54,17 +54,15 @@ p{
 .botoes{
     margin-top: 60px ;
 }
-.btn-primary{
-    width: 134px;
-    height: 45px;
-    font-family: Roboto;
+.btn:hover{
+    
     background: #08436F;
     border: 1px solid #08436F;
-    box-sizing: border-box;
-    border-radius: 5px;
-    margin-right: 27px;
+    color: rgb(255, 255, 255);
+  
 }
-.btn-segundary{
+.btn{
+    margin-right: 14px;
     font-family: Roboto;
     border: 1px solid #08436F;
     box-sizing: border-box;

@@ -1,14 +1,19 @@
 .navbar{
-    padding: 0px 1rem 0px;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
     display: flex;
     justify-content: space-between;
     position: absolute;
-width: 100%;
-height: 107px;
-color: white;
-
-background: #08436F;
+    width: 100vw;
+    height: 107px;
+    background: #08436F;
 }
+.novo{
+    height: 40.94px;
+background: #F8FCFF;
+border-radius: 9px;
+}
+
 .sair{
     text-decoration: none;
     margin-left: 5px;
@@ -18,12 +23,18 @@ background: #08436F;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+.sair:hover{
+   color: rgb(212, 212, 209);
+
 }
 @media(min-width:540px){
-   .navbar{
-           padding-right: 3rem;
-           padding-left: 3rem;
-   
-        }
-   }
+    .navbar{
+        padding-right: 3rem;
+        padding-left: 3rem;
+        
+    }
+}
 

@@ -9,32 +9,34 @@
         <h1>Painel de clientes</h1>
         
     </div>
-    <div>
-        <hr class="risco">
-        <table>
-            <tr>
-                <td>
-                    <div class="img-profile">
-                        <img src="" alt="">
-                    </div>
-                    <p>Michael Lawson</p>
-
-                    <p>michael.lawson@reqres.in</p>
+    <hr class="risco">
+    <div class="table-responsive">
+        <table class="">
+            
+            <div class="dados" *ngFor="let client of clients" > 
+                <tr class="cliente">
+                   <div> <td>
+                        <div class="profile">
+                            <img class="img-profile"src="{{client?.avatar}}" alt="profile">
+                        </div>
+                    </td>
+                </div>
+                    <td class="name"> <p>{{client?.first_name}} {{client?.last_name}}</p></td>
+                    <td class="email">  <p>{{client?.email}}</p></td>
+                    <td class="editar">   <button class="btn">Editar</button></td>
                     
-                    <button>Editar</button>
-                    
-                </td>
-                <td>
-                    <img src="" alt="">
-                    
-                    <p>michael.lawson@reqres.in</p>
-                    
-                    <button>Editar</button>
-                    
-                </td>
-            </tr>
+                </tr>
+            </div>
+            
         </table>
-        <p>Total: 24 clientes</p>
+    </div>   
+    <div class="footer">
+        <div class="total">
+            <p>Total: 24 clientes</p>
+        </div>
+        <div class="botoes">
+            <button class="btn ante">Anterior</button><button class="btn prox">Próximo</button>
+        </div>
     </div>
-    <button>Anterior</button><button>Próximo</button>
+    
 </div>

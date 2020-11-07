@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { from } from 'rxjs';
+import { AuthService} from './auth/auth.service'
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent},
+  { path: '', redirectTo: 'home',canActivate: [AuthService], pathMatch: 'full'},
+  { path: 'home', component: HomeComponent, canActivate: [AuthService]},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
 ];

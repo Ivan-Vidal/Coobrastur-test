@@ -33,9 +33,13 @@ outline: none;
 background: #08436F;
 border-radius: 10px;
 transition: background 0.3s ease-in;
+box-shadow: none;
+border: none;
 }
 .btn:hover{
     background: #2476b4;
+    box-shadow: none;
+     border: none;
 }
 
 

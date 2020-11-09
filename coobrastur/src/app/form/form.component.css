@@ -1,0 +1,80 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.topo{
+    display: flex;
+    margin-top: 150px;
+}
+.topo-img{
+    margin-right: 15px;
+}
+.topo h1{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #08436F;
+}
+.risco{
+    width: 100%;
+}
+h2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #4D4E59;
+}
+p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+}
+.form-control{
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.form-control:focus{
+    box-shadow: none;
+    border: 1px solid #08436F;
+}
+.form-control:valid{
+    border: 1px solid #2ffc06;
+}
+
+.botoes{
+    margin-top: 60px ;
+}
+.btn:hover{
+    
+    background: #08436F;
+    border: 1px solid #08436F;
+    color: rgb(255, 255, 255);
+  
+}
+.btn{
+    margin-right: 14px;
+    font-family: Roboto;
+    border: 1px solid #08436F;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 134px;
+    height: 45px;
+}
+
+@media(min-width:540px){
+    .form-control{
+        width: 400px;
+        
+    }
+}
+

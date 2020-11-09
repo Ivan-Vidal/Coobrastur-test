@@ -26,14 +26,10 @@
                 <label for="exampleInputPassword1">Profissão</label>
                 <input type="text" formControlName="job" class="form-control" required id="exampleInputPassword1">
                 <div class="botoes">
-                    <button class="btn btn">Cadastrar</button>     <button class="btn">Voltar</button>
+                    <button  type="submit"class="btn btn">Cadastrar</button>     <button class="btn" routerLink="/home">Voltar</button>
                 </div>
             </div>
         </form>
     </div>
-    <div *ngIf="register()">
-        <div class="alert alert-success" role="alert">
-          Cadastrado com successo !
-        </div>
-      </div>
+   
 </div>

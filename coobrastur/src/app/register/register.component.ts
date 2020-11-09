@@ -27,10 +27,5 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  usuarioCadastrado(): boolean {
-    if(localStorage.getItem('userLogado')){
-      return true;
-    }
-    return false;
-  }
+
 }

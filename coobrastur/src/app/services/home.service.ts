@@ -1,10 +1,11 @@
 import { client } from './../models/home';
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, throwError } from 'rxjs';
 import { UtilsService } from '../services/utils.service'
-import { retry, catchError } from 'rxjs/operators';
+import { retry, catchError, delay } from 'rxjs/operators';
+import { ControlContainer } from '@angular/forms';
 
 
 const httpOptions = {
@@ -18,24 +19,32 @@ const httpOptions = {
 })
 export class HomeService {
   mostrarMenuEmitter = new EventEmitter<boolean>();
-  obj: object;
-  json;
-  
+
+  client: any;
+
   constructor(private utils: UtilsService,
-    private http: HttpClient, 
-    private router: Router) { }
-    
-    public  getClient(): Observable<client[]> {
-      return this.http.get<client[]>('https://reqres.in/api/users?page=2',httpOptions).pipe(
+    private http: HttpClient,
+    private router: Router ,private route: ActivatedRoute ) { }
+
+    //pegar a lista de clientes
+
+  public getClient(): Observable<client[]> {
+    return this.http.get<client[]>('https://reqres.in/api/users?page=2', httpOptions).pipe(
       retry(1),
       catchError(this.utils.handleError)
-      )
-      
-    }
-    
-    //username(){
-    // this.json = localStorage.getItem('userLogado');
-    //let response = JSON.parse(this.json);
-    //console.log('nome do usuario: ' + response.user.name)  
-    //}
-  } 
+    )
+
+  }
+
+
+  // Carregar cliente pelo id
+  loadById(id) {
+     return this.http.get<client[]>('https://reqres.in/api/users'  + '/' + id).pipe(retry(1),
+     catchError(this.utils.handleError)
+   )
+  }
+//  return this.http.put<client[]>('https://reqres.in/api/users' + '/' + this.client.id, JSON.stringify(this.client), httpOptions)
+  //.pipe(
+    //retry(1),
+    //catchError(this.utils.handleError)
+}

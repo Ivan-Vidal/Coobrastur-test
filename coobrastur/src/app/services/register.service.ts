@@ -26,7 +26,7 @@ export class RegisterService {
       obj => {
         console.log('Cadastrado com sucesso !');
         localStorage.setItem('userLogado', JSON.stringify(obj));
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/home');
        
       },
       error => {
@@ -39,11 +39,5 @@ export class RegisterService {
       return true;
     }
     return false;
-  }
-
-  username(){
-    this.json = localStorage.getItem('userLogado');
-    let response = JSON.parse(this.json);
-    console.log('nome do usuario: ' + response.user.name)  
   }
 } 

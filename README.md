@@ -6,10 +6,17 @@ The objective of the project is to develop an application with 3 screens, one of
 
 
 ## Preview
-***Mobile***
+
+***Desktop***
+
+ <img src="coobrastur/src/assets/img/video_para-git.gif"> 
 
 
 
+
+
+
+***Mobile*** <br><br><br><br>
  *login-mobile*
 <div>
   <img src="coobrastur/src/assets/img/login-mobile.png" style="width:100px;"> 

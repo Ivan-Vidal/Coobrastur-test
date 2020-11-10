@@ -9,6 +9,7 @@
     background: #08436F;
 }
 .novo{
+ 
     height: 40.94px;
 background: #F8FCFF;
 border-radius: 9px;
@@ -44,14 +45,18 @@ transition: ease-in 0.2s;
         padding-left: 6rem;
         
     }
+    
 }
 
 @media(min-width:680px){
     .navbar{
-     
         height: 107px;
-      
     }
 
 }
 
+@media(min-width: 770px){
+    .novo{
+        width: 201px;
+    }
+}

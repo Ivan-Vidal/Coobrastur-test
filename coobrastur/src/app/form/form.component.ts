@@ -39,7 +39,7 @@ export class FormComponent implements OnInit {
       this.form.patchValue({
         id: client.id,
         avatar: client.avatar,
-        name: client.first_name  +  client.last_name,
+        name: `${client.first_name}  ${client.last_name}`,
         email: client.email
       });
       

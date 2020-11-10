@@ -8,7 +8,7 @@
 }
 .topo{
     display: flex;
-    margin-top: 150px;
+    margin-top: 190px;
 }
 .topo-img{
     margin-right: 15px;
@@ -111,6 +111,9 @@
     .input-edit{
         margin-top: 20px;
         margin-right: 10px;
+    }
+    .topo{
+        margin-top: 150px;
     }
 }
 

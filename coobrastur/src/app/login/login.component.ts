@@ -8,12 +8,12 @@ import { FormGroup, FormBuilder  } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  
   loginForm: FormGroup;
   submit: boolean;
-
+  
   constructor( private loginService: LoginService, private fb: FormBuilder) { }
-
+  
   ngOnInit(): void {
     this.submit = false;
     
@@ -22,11 +22,11 @@ export class LoginComponent implements OnInit {
       'password': ['', ],
     });
   }
-
+  
   login(){
     console.log('login em progresso')
     this.submit = true;
     this.loginService.login(this.loginForm.value);
   }
-
+  
 }

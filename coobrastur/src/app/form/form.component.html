@@ -17,7 +17,7 @@
             Edite os dados desejados abaixo:
         </p>
         
-        <form [formGroup]="form" required>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="exampleInputEmail1">Foto de perfil</label>
                 <input type="url" formControlName="avatar" class="form-control" required>

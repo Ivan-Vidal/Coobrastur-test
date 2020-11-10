@@ -12,38 +12,38 @@
     <hr class="risco">
     <div class="container-table">
         <table class="">
-           
+            
             <div class="dados" *ngFor="let client of clients" > 
-             
+                
                 <tr class="cliente">
-                   <div class="profile-container">
+                    <div class="profile-container">
                         <td>
-                        <div class="profile-img">
-                            <img class="img-profile"  src="{{client?.avatar}}" alt="profile">
-                        </div>
-                    </td>
-                </div>
-                <div class="name-profile">
-                    <td class="name"> <input  disabled type="text" class="input-edit" value="{{client?.first_name }} {{ client?.last_name}}"></td></div>
-                   <div class="email-profile"> <td class="email">  <input disabled class="input-edit" type="text" value="{{client?.email}}"></td></div>
-                <div class="btn-edit">   <td class="editar">   <button routerLink="/editar" (click)="onEdit(client.id)" class="btn">Editar</button></td></div> 
+                            <div class="profile-img">
+                                <img class="img-profile"  src="{{client?.avatar}}" alt="profile">
+                            </div>
+                        </td>
+                    </div>
+                    <div class="name-profile">
+                        <td class="name"> <input  disabled type="text" class="input-edit" value="{{client?.first_name }} {{ client?.last_name}}"></td></div>
+                        <div class="email-profile"> <td class="email">  <input disabled class="input-edit" type="text" value="{{client?.email}}"></td></div>
+                        <div class="btn-edit">   <td class="editar">   <button routerLink="/editar" (click)="onEdit(client.id)" class="btn">Editar</button></td></div> 
+                        
+                    </tr>
                     
-                </tr>
-           
+                </div>
+                
+            </table>
+        </div>   
+        <div class="footer">
+            <div class="total">
+                <p>Total: {{total}} clientes</p>
             </div>
+            <div class="botoes">
+                
+                <button  class="btn ante">Anterior</button>
+                <button class="btn prox">Próximo</button>
+                
+            </div>
+        </div>
         
-        </table>
-    </div>   
-    <div class="footer">
-        <div class="total">
-            <p>Total: {{total}} clientes</p>
-        </div>
-        <div class="botoes">
-           
-            <button  class="btn ante">Anterior</button>
-            <button class="btn prox">Próximo</button>
-      
-        </div>
     </div>
-    
-</div>

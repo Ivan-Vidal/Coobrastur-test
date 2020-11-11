@@ -5,9 +5,9 @@ import { throwError, ObservableInput } from 'rxjs';
   providedIn: 'root'
 })
 export class UtilsService {
-
+  
   constructor() { }
-
+  
   public handleError(error: any): ObservableInput<any> {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

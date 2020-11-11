@@ -36,8 +36,8 @@ export class HomeService {
       
     }
     nextPrev(page){
-    let url = this.http.get<client[]>('https://reqres.in/api/users?page=' + page ).pipe(retry(1),
-    catchError(this.utils.handleError))
+      let url = this.http.get<client[]>('https://reqres.in/api/users?page=' + page ).pipe(retry(1),
+      catchError(this.utils.handleError))
     }
     // Carregar cliente pelo id
     loadById(id) {
@@ -46,9 +46,9 @@ export class HomeService {
       )
     }
     update(client) {
-     return this.http.put<client[]>('https://reqres.in/api/users' + '/' + client.id, httpOptions)
-    .pipe(
-    retry(1),
-   catchError(this.utils.handleError))
+      return this.http.put<client[]>('https://reqres.in/api/users' + '/' + client.id, httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.utils.handleError))
+      }
     }
-  }

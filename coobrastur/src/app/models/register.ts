@@ -5,4 +5,4 @@ export interface Register {
     user?:{
         name?: string;
     }
-  }
+}

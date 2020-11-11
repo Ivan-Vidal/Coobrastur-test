@@ -20,24 +20,24 @@ export class RegisterService {
   constructor(
     private http: HttpClient, 
     private router: Router) { }
-
-  login(register: Register){
-    this.http.post<Register>('https://reqres.in/api/users', register, httpOptions).subscribe(
+    
+    login(register: Register){
+      this.http.post<Register>('https://reqres.in/api/users', register, httpOptions).subscribe(
       obj => {
         console.log('Cadastrado com sucesso !');
         localStorage.setItem('userLogado', JSON.stringify(obj));
         this.router.navigateByUrl('/home');
-       
+        
       },
       error => {
         console.log('erro ao logar');
       }
-    );  
-  }
-  usuarioCadastrado(): boolean {
-    if(localStorage.getItem('userLogado')){
-      return true;
+      );  
     }
-    return false;
-  }
-} 
+    usuarioCadastrado(): boolean {
+      if(localStorage.getItem('userLogado')){
+        return true;
+      }
+      return false;
+    }
+  } 

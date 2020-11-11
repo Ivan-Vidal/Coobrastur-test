@@ -13,22 +13,22 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class LoginService {
-
+  
   constructor(
-     private http:HttpClient,
-     private router: Router
+    private http:HttpClient,
+    private router: Router
     ) { }
     login(user: User){
       this.http.post<User>('https://reqres.in/api/login', user, httpOptions).subscribe(
-        obj => {
-          console.log('logou com sucesso');
-          localStorage.setItem('userLogado', JSON.stringify(obj));
-          this.router.navigateByUrl('/home');
-         
-        },
-        error => {
-          console.log('erro ao logar', error);
-        }
+      obj => {
+        console.log('logou com sucesso');
+        localStorage.setItem('userLogado', JSON.stringify(obj));
+        this.router.navigateByUrl('/home');
+        
+      },
+      error => {
+        console.log('erro ao logar', error);
+      }
       );  
     }
     usuarioLogado(): boolean {
@@ -42,4 +42,4 @@ export class LoginService {
       this.router.navigateByUrl('/login');
       console.log('Saindo...')
     }
-}
+  }

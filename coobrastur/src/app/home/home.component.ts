@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   form: FormGroup
   
   constructor(private hService: HomeService,private fb: FormBuilder,  private router: Router ,private route: ActivatedRoute ) { }
-
+  
   ngOnInit(): void {
     this.getClient()
   }
@@ -32,11 +32,11 @@ export class HomeComponent implements OnInit {
   onEdit(id) {
     this.router.navigate(['editar', id]); 
   }
-
+  
   nextPrev(page){
-this.hService.nextPrev(page)
+    this.hService.nextPrev(page)
   }
-
-
+  
+  
 }
 
